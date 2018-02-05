@@ -16,6 +16,6 @@ RUN rustup component add rustfmt-preview --toolchain=nightly-2018-01-23
 RUN curl -O https://crypto.stanford.edu/pbc/files/pbc-0.5.14.tar.gz \
     && tar zxvf pbc-0.5.14.tar.gz \
     && cd pbc-0.5.14 \
-    && ./configure --prefix=$HOME/.local \
+    && ./configure \
     && make \
     && make install
