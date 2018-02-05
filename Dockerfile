@@ -11,3 +11,10 @@ RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly-201
 ENV PATH $PATH:/root/.cargo/bin
 
 RUN rustup component add rustfmt-preview --toolchain=nightly-2018-01-23
+
+RUN wget https://crypto.stanford.edu/pbc/files/pbc-0.5.14.tar.gz \
+    && tar zxvf pbc-0.5.14.tar.gz \
+    && cd pbc-0.5.14 \
+    && ./configure --prefix=$HOME/.local \
+    && make \
+    && make install
