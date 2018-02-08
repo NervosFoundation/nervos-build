@@ -19,3 +19,4 @@ RUN curl -O https://crypto.stanford.edu/pbc/files/pbc-0.5.14.tar.gz \
     && ./configure \
     && make \
     && make install
+
